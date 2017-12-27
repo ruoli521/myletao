@@ -1,0 +1,57 @@
+@import 'base.less';
+
+// 头部区域
+
+#main {
+    background-color: #eee;
+    .category-left {
+        float: left;
+        >ul {
+            >li {
+                >a {
+                    display: block;
+                    width: 80px;
+                    height: 40px;
+                    border-right: 1px solid #ccc;
+                    border-bottom: 1px solid #cccccc;
+                    line-height: 40px;
+                    text-align: center;
+                    font-size: 14px;
+                }
+                &.active {
+                    >a {
+                        background-color: #cccccc;
+                        color: @main-color;
+                    }
+                }
+            }
+        }
+    }
+    .category-right {
+        overflow: hidden;
+        width: auto;
+        padding: 10px;
+        left: 80px;
+        top: 45px;
+        bottom: 50px;
+        .mui-scroll {
+            position: relative;
+            .mui-row {
+                background-color: #fff;
+                >div {
+                    >a {
+                        display: block;
+                        text-align: center;
+                        >img {
+                            width: 100%;
+                        }
+                        >p {
+                            font-size: 12px;
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -6,7 +6,24 @@
 img {
     vertical-align: middle;
 }
+* {
+    padding: 0;
+    margin: 0;
+}
+li {
+    list-style:none;
+}
+a {
+    color: #666;
+}
 
+[class^="fa-"],[class*=" fa-"]  {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
 
 // 头部区域的公共样式
 
@@ -29,6 +46,25 @@ img {
         right: 10px;
         top: 14px;
     }
+    .fa-arrow-left {
+        position: absolute;
+        left: 10px;
+        top: 14px;
+        color: #fff;
+    }
+    form {
+        padding-left: 35px;
+        padding-right: 35px;
+        >input {
+            width: 100%;
+            background-color: #fff;
+            height: 30px;
+            margin-top: 7px;
+            font-size: 14px;
+            text-align: left;
+            color: #000;
+        }
+    }
 }
 
 // 底部的公共样式
@@ -43,17 +79,15 @@ img {
     padding: 11px;
     z-index: 998;
     .mui-row {
-        >div {
-            &:first-child {
-                >a {
-                    color: orange;
-                }
-            }
-            >a {
+        >div {          
+            >a {              
                 color: #fff;
                 font-size: 14px;
                 text-align: center;
                 display: block;
+                &.active {
+                    color: orange;
+                }
                
                 &::before {
                     display: block;
