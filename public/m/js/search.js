@@ -12,7 +12,7 @@ $(function(){
 
 function addHistory(){
     $('.btn-search').on('click',function(){
-        var search =$('.search-input').val();
+        var search =$('.search-input').val().trim();
         if(!search){
             alert('请输入要搜索的商品');
             return; 
@@ -33,7 +33,7 @@ function addHistory(){
         }
 
         $('.search-input').val('');
-
+        window.location.href="productlist.html?search="+search;
     });
 };
 

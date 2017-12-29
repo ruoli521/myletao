@@ -1,0 +1,39 @@
+@import 'base.less';
+
+
+
+#main {
+    .mui-scroll-wrapper {
+        position: relative;
+        height: 100%;
+    }
+    .productlist {
+        .productlist-title {
+            .mui-row {
+                >div {
+                    >a {
+                        display: block;
+                        font-size: 14px;
+                        text-align: center;
+                        background-color: #cccccc;
+                        padding: 5px 0;
+                        >i {
+                            font-weight: bold;
+                            font-size: 16px;
+                        }
+                    }
+                    &.active {
+                        >a {
+                            color: #f40;
+                        }
+                    }
+                }
+            }
+        }
+        .productlist-content {
+            >div {
+                padding: 0 5px;
+            }
+        }
+    }
+}
